@@ -1,0 +1,5 @@
+#!/bin/bash
+if [[ $(git diff --cached --name-only | grep -v '\.txt$') ]]; then
+    echo "Error: all files must be of type .txt"
+    exit 1
+fi
